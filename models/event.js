@@ -6,12 +6,12 @@ var Schema = mongoose.Schema;
 
 var event = new Schema({
     name: String,
-    description: Date,
+    description: String,
     img: { data: Buffer, contentType: String },
     location: String,
     type: String,
     price: Number,
-    count: Number, 
+    count: Number,
     date: String,
     start: Number, //in UTC
     end: Number, //in UTC
