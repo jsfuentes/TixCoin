@@ -12,5 +12,6 @@ exports.event_detail = function(req, res) {
 
 // Handle BookInstance create on POST.
 exports.event_create = function(req, res) {
-    res.send('NOT IMPLEMENTED: Event create POST');
+  console.log(req.body);
+  res.send(req.body);
 };

@@ -40,23 +40,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<h1>Event Form </h1>
 	<div class="booking-form-w3layouts">
 		<!-- Form starts here -->
-		<form action="#" method="post">
+		<form action="/events/create" method="post">
 			<h2 class="sub-heading-agileits">Event Details</h2>
 			<div class="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
-					<input id="datepicker" name="Text" type="text" placeholder="Event Date" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
+					<input id="datepicker" name="text" type="text" placeholder="Event Date" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
 					    required>
 				</div>
 				<div class="field-agileinfo-spc form-w3-agile-text2">
-					<input type="text" id="timepicker" name="Time" class="timepicker form-control" placeholder="Event Time" value="" required>
+					<input type="text" id="timepicker" name="time" class="timepicker form-control" placeholder="Event Time" value="" required>
 				</div>
 			</div>
 			<div class ="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
-					<input type="text" name="Name" placeholder="Location" required>
+					<input type="text" name="location" placeholder="Location" required>
 				</div>
 				<div class="field-agileinfo-spc form-w3-agile-text1">
-					<input type="text" name="Name" placeholder="Type" required>
+					<input type="text" name="type" placeholder="Type" required>
 				</div>
 			</div>
 
@@ -64,11 +64,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="main-flex-w3ls-sectns">
 				<div class="secondary">
 					<label id="actual_label" for = "prices">Ticket Price:</label>
-					<input id="prices" type="number" step="any" placeholder="ticket price" required>
+					<input id="prices" type="number" name="price" step="any" placeholder="ticket price" required>
 				</div>
 				<div class="other_secondary">
 					<label id="actual_label" for = "prices"># Tickets:</label>
-					<input id="prices" type="number" placeholder="0" required>
+					<input id="prices" type="number" name="ticketCount" placeholder="0" required>
 				</div>
 			</div>
 
@@ -76,14 +76,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h3 class="sub-heading-agileits">Contact Information</h3>
 			<div class="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
-					<input type="text" name="Name" placeholder="Full Name" required>
+					<input type="text" name="name" placeholder="Full Name" required>
 				</div>
 				<div class="field-agileinfo-spc form-w3-agile-text2">
-					<input type="text" name="Phone no" placeholder="Phone Number" required>
+					<input type="file" name="img" required>
 				</div>
 			</div>
 			<div class="field-agileinfo-spc form-w3-agile-text">
-				<input type="email" name="Email" placeholder="Email" required>
+				<input type="email" name="email" placeholder="Email" required>
 			</div>
 			<div class="clear"></div>
 			<input type="submit" value="Checkout">
