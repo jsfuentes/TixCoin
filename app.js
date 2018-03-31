@@ -9,7 +9,10 @@ const
 const
   indexRouter = require('./routes/index'),
   eventsRouter = require('./routes/events');
-
+// For showing multiple listings
+var listingsRouter = require('./routes/listings');
+// For individual posts
+var listingRouter = require('./routes/listing');
 
 var app = express();
 
@@ -26,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/events', eventsRouter);
+app.use('/listings', listingsRouter);
+app.use('/listing', listingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
