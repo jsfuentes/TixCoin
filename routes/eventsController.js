@@ -3,22 +3,8 @@ const
 const
   Event = require('../models/event');
 const PATH_TO_UPLOAD = "public/uploads/";
-// Display list of all BookInstances.
-exports.event_list = function(req, res) {
-  Event.find({}, function (err, events) {
-    if (err) return res.send(err);
-    // 'athletes' contains the list of athletes that match the criteria.
-    console.log("ALL EVENTS: ", events);
-    res.render('test', {events: events});
-  });
-};
 
-// Display detail page for a specific BookInstance.
-exports.event_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Event detail: ' + req.params.eventId);
-};
-
-// Handle BookInstance create on POST.
+// Handle Event create on POST.
 exports.event_create = function(req, res) {
   console.log("Current dir", process.cwd());
   var imgFile = fs.readFileSync(PATH_TO_UPLOAD + req.files[0].filename);
