@@ -1,7 +1,10 @@
-pragma solidity ^0.4.21; /**
+pragma solidity ^0.4.21;
+/**
  * @title SafeMath
  * @dev Math operations with safety checks that throw on error
- */ library SafeMath {
+ */
+library SafeMath {
+
   /**
   * @dev Multiplies two numbers, throws on overflow.
   */
@@ -13,6 +16,7 @@ pragma solidity ^0.4.21; /**
     assert(c / a == b);
     return c;
   }
+
   /**
   * @dev Integer division of two numbers, truncating the quotient.
   */
@@ -22,14 +26,15 @@ pragma solidity ^0.4.21; /**
     // assert(a == b * c + a % b); // There is no case in which this doesn't hold
     return a / b;
   }
+
   /**
-  * @dev Subtracts two numbers, throws on overflow (i.e. if subtrahend is greater than 
-minuend).
+  * @dev Subtracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend).
   */
   function sub(uint256 a, uint256 b) internal pure returns (uint256) {
     assert(b <= a);
     return a - b;
   }
+
   /**
   * @dev Adds two numbers, throws on overflow.
   */
@@ -39,17 +44,22 @@ minuend).
     return c;
   }
 }
+
 contract Ownable {
   address public owner;
+
+
   event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+
+
   /**
-   * @dev The Ownable constructor sets the original `owner` of the contract to the 
-sender
+   * @dev The Ownable constructor sets the original `owner` of the contract to the sender
    * account.
    */
   function Ownable() public {
     owner = msg.sender;
   }
+
   /**
    * @dev Throws if called by any account other than the owner.
    */
@@ -57,6 +67,7 @@ sender
     require(msg.sender == owner);
     _;
   }
+
   /**
    * @dev Allows the current owner to transfer control of the contract to a newOwner.
    * @param newOwner The address to transfer ownership to.
@@ -66,39 +77,41 @@ sender
     emit OwnershipTransferred(owner, newOwner);
     owner = newOwner;
   }
+
 }
+
 contract ERC20Interface {
     function totalSupply() public constant returns (uint);
     function balanceOf(address tokenOwner) public constant returns (uint balance);
-    function allowance(address tokenOwner, address spender) public constant returns 
-(uint remaining);
+    function allowance(address tokenOwner, address spender) public constant returns (uint remaining);
     function transfer(address to, uint tokens) public returns (bool success);
     function approve(address spender, uint tokens) public returns (bool success);
-    function transferFrom(address from, address to, uint tokens) public returns (bool 
-success);
+    function transferFrom(address from, address to, uint tokens) public returns (bool success);
     event Transfer(address indexed from, address indexed to, uint tokens);
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
 }
+
+
+
 contract TokenTicket is ERC20Interface, Ownable{
     using SafeMath for uint256;
     mapping (address=>uint256) public balances;
     mapping (address => mapping (address => uint256)) internal allowed;
-    uint256 ticketsSold = 0;
+    uint256 ticketsSold = 0;//
     bool public pause = false;
     uint8 public constant decimals = 0;
     bool public saleComplete = false;
-    string public name;
-    string public symbol;
+    string public name; //
+    string public symbol; // 
     uint256 public totalSupply;
-    string EventLocation;
-    string EventInformation;
-    uint256 EventStartTime;
-    uint256 public feeForTicket;
-    function TokenTicket(string _name, string _symbol, uint256 _totalSupply, string 
-_EventLocation, string _EventInformation, uint256 _EventStartTime, uint _feeForTicket) 
-public onlyOwner{
+    string EventLocation; //
+    string EventInformation; //
+    uint256 EventStartTime; //
+    uint256 public feeForTicket; //
+
+    function TokenTicket(string _name, string _symbol, uint256 _totalSupply, string _EventLocation, string _EventInformation, uint256 _EventStartTime, uint _feeForTicket) public onlyOwner{
         name = _name;
-        symbol = _symbol;
+        symbol  = _symbol;
         totalSupply = _totalSupply;
         EventLocation = _EventLocation;
         EventInformation = _EventInformation;
@@ -131,8 +144,7 @@ public onlyOwner{
         return true;
     }
     
-    function transferFrom(address _from, address _to, uint _tokens) public returns 
-(bool){
+    function transferFrom(address _from, address _to, uint _tokens) public returns (bool){
         require(_to != address(0));
         require(_tokens <= balances[_from]);
         require(_tokens <= allowed[_from][msg.sender]);
@@ -143,8 +155,7 @@ public onlyOwner{
         return true;
     }
     
-    function allowance(address _tokenOwner, address _spender) public constant returns 
-(uint){
+    function allowance(address _tokenOwner, address _spender) public constant returns (uint){
         return allowed[_tokenOwner][_spender];
     }
     
@@ -164,9 +175,14 @@ public onlyOwner{
         balances[owner] = balances[owner].add(_newTickets);
         totalSupply = totalSupply.add(_newTickets);
     }
+    
+    function withdraw() external onlyOwner{
+        address myAddress = this;
+        owner.transfer(myAddress.balance);
+    }
+
     function buy() external payable returns (bool){
-        require(msg.value == feeForTicket && !saleComplete && ticketsSold<totalSupply 
-&& !pause);
+        require(msg.value == feeForTicket && !saleComplete && ticketsSold<totalSupply && !pause);
         balances[msg.sender] = balances[msg.sender].add(1);
         balances[owner] = balances[owner].sub(1);
         ticketsSold = ticketsSold.add(1);
@@ -174,6 +190,11 @@ public onlyOwner{
             saleComplete = true;
         }
         return true;
+
+    }
+    function getInfo() external view returns(string, string, string, string, uint256, uint256, uint256){
+
+        return (name, symbol, EventLocation, EventInformation, EventStartTime,ticketsSold, feeForTicket);
     }
     
 }
