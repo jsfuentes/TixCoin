@@ -1,0 +1,119 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Tickets4Tokens</title>
+	<!-- Meta tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="tokens,decentralized,blockchain,ethereum"/>
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tags -->
+	<!-- Stylesheet -->
+	<link href="css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- //Stylesheet -->
+	<!--fonts-->
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+	<!--//fonts-->
+</head>
+
+<body>
+	<!--background-->
+	<h1>Event Form </h1>
+	<div class="booking-form-w3layouts">
+		<!-- Form starts here -->
+		<form action="#" method="post">
+			<h2 class="sub-heading-agileits">Event Details</h2>
+			<div class="main-flex-w3ls-sectns">
+				<div class="field-agileinfo-spc form-w3-agile-text1">
+					<input id="datepicker" name="Text" type="text" placeholder="Event Date" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
+					    required>
+				</div>
+				<div class="field-agileinfo-spc form-w3-agile-text2">
+					<input type="text" id="timepicker" name="Time" class="timepicker form-control" placeholder="Event Time" value="" required>
+				</div>
+			</div>
+			<div class ="main-flex-w3ls-sectns">
+				<div class="field-agileinfo-spc form-w3-agile-text1">
+					<input type="text" name="Name" placeholder="Location" required>
+				</div>
+				<div class="field-agileinfo-spc form-w3-agile-text1">
+					<input type="text" name="Name" placeholder="Type" required>
+				</div>
+			</div>
+
+
+			<div class="main-flex-w3ls-sectns">
+				<div class="secondary">
+					<label id="actual_label" for = "prices">Ticket Price:</label>
+					<input id="prices" type="number" step="any" placeholder="ticket price" required>
+				</div>
+				<div class="other_secondary">
+					<label id="actual_label" for = "prices"># Tickets:</label>
+					<input id="prices" type="number" placeholder="0" required>
+				</div>
+			</div>
+
+
+			<h3 class="sub-heading-agileits">Contact Information</h3>
+			<div class="main-flex-w3ls-sectns">
+				<div class="field-agileinfo-spc form-w3-agile-text1">
+					<input type="text" name="Name" placeholder="Full Name" required>
+				</div>
+				<div class="field-agileinfo-spc form-w3-agile-text2">
+					<input type="text" name="Phone no" placeholder="Phone Number" required>
+				</div>
+			</div>
+			<div class="field-agileinfo-spc form-w3-agile-text">
+				<input type="email" name="Email" placeholder="Email" required>
+			</div>
+			<div class="clear"></div>
+			<input type="submit" value="Checkout">
+			<div class="clear"></div>
+		</form>
+		<!--// Form starts here -->
+	</div>
+	<!--copyright-->
+	<div class="copyright">
+		<p>2018. Tickets 4 Tokens	</p>
+	</div>
+	<!--//copyright-->
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<!-- Time Js -->
+	<script type="text/javascript" src="js/wickedpicker.js"></script>
+	<script type="text/javascript">
+		$('.timepicker,.timepicker1').wickedpicker({
+			twentyFour: false
+		});
+	</script>
+	<!--// Time Js -->
+	<!-- Calendar Js -->
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+		});
+	</script>
+	<!-- //Calendar Js -->
+
+</body>
+
+</html>
