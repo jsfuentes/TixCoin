@@ -175,6 +175,11 @@ contract TokenTicket is ERC20Interface, Ownable{
         balances[owner] = balances[owner].add(_newTickets);
         totalSupply = totalSupply.add(_newTickets);
     }
+    
+    function withdraw() external onlyOwner{
+        address myAddress = this;
+        owner.transfer(myAddress.balance);
+    }
 
     function buy() external payable returns (bool){
         require(msg.value == feeForTicket && !saleComplete && ticketsSold<totalSupply && !pause);
