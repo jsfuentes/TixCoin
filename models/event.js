@@ -11,12 +11,13 @@ var event = new Schema({
     location: String,
     type: String,
     price: Number,
+    count: Number, 
     date: String,
     start: Number, //in UTC
     end: Number, //in UTC
     organizerName: String,
-    organizerDescription: String
-
+    organizerDescription: String,
+    address: String
 });
 
 // Compile model from schema

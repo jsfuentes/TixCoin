@@ -40,7 +40,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<h1>Event Form </h1>
 	<div class="booking-form-w3layouts">
 		<!-- Form starts here -->
-		<form action="/events/create" method="post">
+		<form action="/events/create" name="EventForm" method="post" enctype="multipart/form-data">
 			<h2 class="sub-heading-agileits">Event Details</h2>
 			<div class="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
@@ -79,7 +79,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="text" name="name" placeholder="Full Name" required>
 				</div>
 				<div class="field-agileinfo-spc form-w3-agile-text2">
-					<input type="file" name="img" required>
+					<input type="file" name="img" value="img" required>
 				</div>
 			</div>
 			<div class="field-agileinfo-spc form-w3-agile-text">
