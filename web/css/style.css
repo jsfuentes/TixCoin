@@ -1,0 +1,892 @@
+/*
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+
+
+/*--reset--*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+nav ul,
+nav li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*--start editing from here--*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.secondary {
+  position: relative;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.other_secondary {
+  position: relative;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+#actual_label {
+  font-weight: bold;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+#prices{
+  border-style: none;
+}
+
+textarea:focus,input:focus{
+  outline: none;
+}
+
+*:focus{
+  outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.txt-rt {
+    text-align: right;
+}
+
+
+/* text align right */
+
+.txt-lt {
+    text-align: left;
+}
+
+
+/* text align left */
+
+.txt-center {
+    text-align: center;
+}
+
+
+/* text align center */
+
+.float-rt {
+    float: right;
+}
+
+
+/* float right */
+
+.float-lt {
+    float: left;
+}
+
+
+/* float left */
+
+.clear {
+    clear: both;
+}
+
+
+/* clear float */
+
+.pos-relative {
+    position: relative;
+}
+
+
+/* Position Relative */
+
+.pos-absolute {
+    position: absolute;
+}
+
+
+/* Position Absolute */
+
+.vertical-base {
+    vertical-align: baseline;
+}
+
+
+/* vertical align baseline */
+
+.vertical-top {
+    vertical-align: top;
+}
+
+
+/* vertical align top */
+
+nav.vertical ul li {
+    display: block;
+}
+
+
+/* vertical menu */
+
+nav.horizontal ul li {
+    display: inline-block;
+}
+
+
+/* horizontal menu */
+
+img {
+    max-width: 100%;
+}
+
+
+/*--end reset--*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    background: url(../images/banner1.jpg)no-repeat center top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /*background-attachment: fixed;*/
+}
+
+.booking-form-w3layouts {
+    box-sizing: border-box;
+    padding: 3em 3em;
+    background: rgba(0, 0, 0, 0.78);
+    width: 65%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    text-shadow: 1px 1px 7px #6b6b6b;
+    letter-spacing: 5px;
+    margin: 1.3em 0 .7em;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+h2.sub-heading-agileits,
+h3.sub-heading-agileits {
+    display: inline-block;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: .4em;
+    padding: 0px 25px 10px 0px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #0091cd;
+    font-family:sans-serif;
+}
+
+.radio-section {
+    text-align: left;
+    margin: 0.7em 0;
+}
+
+.radio-section h6 {
+    display: inline;
+    margin-top: 10px;
+    color: #0091cd;
+    font-size: 19px;
+    text-transform: capitalize;
+    margin-bottom: .7em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.radio-section ul {
+    display: inline;
+}
+
+.radio-buttons-w3-agileits li input[type="radio"] {
+    cursor: pointer;
+}
+
+.radio-buttons-w3-agileits li label {
+    color: #fff;
+    font-size: 13.5px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/*-- form --*/
+
+.booking-form-w3layouts input[type="text"],
+.booking-form-w3layouts input[type="email"],
+.booking-form-w3layouts textarea,
+select.form-control,
+input#datepicker {
+    width: 100%;
+    font-weight: 300;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    padding: 10px 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.booking-form-w3layouts textarea {
+    resize: none;
+    height: 80px;
+}
+
+.field-agileinfo-spc {
+    margin-bottom: 1em;
+}
+
+.form-w3-agile-text {
+    width: 100%;
+}
+
+select.form-control option {
+    background: #000;
+}
+
+.booking-form-w3layouts input[type="submit"],
+.booking-form-w3layouts input[type="reset"] {
+    text-transform: capitalize;
+    background: #0091cd;
+    color: #fff;
+    padding: 0.5em 4em;
+    border: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-top: 1em;
+    float: left;
+    outline: none;
+    letter-spacing: 1px;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+
+.booking-form-w3layouts input[type="submit"] {
+    margin-right: 1.5em;
+    background: #d2741c;
+}
+
+.booking-form-w3layouts input[type="submit"]:hover {
+    background: #0091cd;
+    color: #fff;
+}
+
+.booking-form-w3layouts input[type="reset"]:hover {
+    background: #d2741c;
+    color: #fff;
+}
+
+.booking-form-w3layouts ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.booking-form-w3layouts :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+}
+
+.booking-form-w3layouts ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+}
+
+.booking-form-w3layouts :-ms-input-placeholder {
+    color: #fff;
+}
+
+p.wickedpicker__title {
+    font-family: 'Roboto', sans-serif;
+    background: #0091cd;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.wickedpicker__close {
+    color: #fefefe;
+    margin-top: 5px;
+}
+
+
+/*-- checkbox --*/
+
+.booking-form-w3layouts label {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.83);
+    letter-spacing: 2px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+ul.radio-buttons-w3-agileits li {
+    display: inline-block;
+    margin: 0em 2em;
+}
+
+
+/*-- //checkbox --*/
+
+
+/*--// form --*/
+
+
+/*--copyright--*/
+
+.copyright {
+    margin: 2.5em 0em;
+    text-align: center;
+}
+
+.copyright p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.copyright p a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.copyright p a:hover {
+    color: #0091cd;
+}
+
+
+/*--//copyright--*/
+
+
+/*--responsive--*/
+
+@media(max-width:1680px) {
+    h1 {
+        margin: 1.1em 0 .5em;
+    }
+}
+
+@media(max-width:1600px) {
+    h1 {
+        font-size: 57px;
+        margin: .9em 0 0.5em;
+    }
+    .copyright {
+        margin: 1.7em 0em;
+    }
+}
+
+@media(max-width:1440px) {
+    .booking-form-w3layouts {
+        width: 73%;
+    }
+}
+
+@media(max-width:1366px) {
+    h1 {
+        font-size: 54px;
+        margin: .8em 0 0.4em;
+    }
+    .booking-form-w3layouts {
+        width: 75%;
+    }
+    .copyright {
+        margin: 2em 0em;
+    }
+}
+
+@media(max-width:1280px) {
+    .booking-form-w3layouts {
+        width: 80%;
+    }
+    .copyright {
+        margin: 2.2em 0em;
+    }
+    .ui-datepicker,
+    .wickedpicker {
+        width: 20.7%;
+    }
+}
+
+@media(max-width:1080px) {
+    .booking-form-w3layouts {
+        width: 83%;
+        padding: 2em 2.2em;
+    }
+    .ui-datepicker,
+    .wickedpicker {
+        width: 23%;
+    }
+}
+
+@media(max-width:1024px) {
+    h1 {
+        font-size: 52px;
+    }
+    h2.sub-heading-agileits,
+    h3.sub-heading-agileits {
+        font-size: 22px;
+        padding: 0px 20px 7px 0px;
+    }
+    .field-agileinfo-spc {
+        margin-bottom: 0.8em;
+    }
+    .copyright {
+        margin: 1.9em 0em;
+    }
+    .ui-datepicker,
+    .wickedpicker {
+        width: 23.2%;
+    }
+    .booking-form-w3layouts input[type="submit"],
+    .booking-form-w3layouts input[type="reset"] {
+        padding: 0.5em 3em;
+        font-size: 1.1em;
+    }
+}
+
+@media(max-width:991px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 31.2%;
+    }
+}
+
+@media(max-width:900px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 30.7%;
+    }
+}
+
+@media(max-width:800px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 30%;
+    }
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@media(max-width:768px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 31%;
+    }
+    h2.sub-heading-agileits,
+    h3.sub-heading-agileits {
+        font-size: 21px;
+        padding: 0px 15px 7px 0px;
+    }
+    .radio-section h6 {
+        font-size: 17px;
+        letter-spacing: 1.5px;
+    }
+    .copyright p {
+        font-weight: 300;
+    }
+    ul.radio-buttons-w3-agileits li {
+        margin: 0em 1em;
+    }
+}
+
+@media(max-width:767px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 35.7%;
+    }
+}
+
+@media(max-width:736px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 35.5%;
+    }
+    .copyright p {
+        word-spacing: 0px;
+    }
+}
+
+@media(max-width:667px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 34.7%;
+    }
+    .wickedpicker__close {
+        margin-top: 2px;
+    }
+    h1 {
+        font-size: 44px;
+        margin: .8em 0 0.5em;
+    }
+    .copyright p {
+        letter-spacing: 1.5px;
+    }
+    h2.sub-heading-agileits,
+    h3.sub-heading-agileits {
+        font-size: 19px;
+        letter-spacing: 1.5px;
+    }
+    .booking-form-w3layouts {
+        width: 86%;
+        padding: 2em 2em;
+    }
+    .booking-form-w3layouts input[type="text"],
+    .booking-form-w3layouts input[type="email"],
+    .booking-form-w3layouts textarea,
+    select.form-control,
+    input#datepicker {
+        padding: 8px 10px;
+    }
+    .field-agileinfo-spc {
+        margin-bottom: 0.9em;
+    }
+    h2.sub-heading-agileits,
+    h3.sub-heading-agileits {
+        margin-bottom: .6em;
+    }
+}
+
+@media(max-width:640px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 36.7%;
+    }
+    .copyright {
+        margin: 1.5em 2em;
+    }
+    .copyright p {
+        line-height: 32px;
+        letter-spacing: 1.6px;
+    }
+    .booking-form-w3layouts input[type="submit"] {
+        margin-right: 0.7em;
+    }
+}
+
+@media(max-width:600px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 38.3%;
+    }
+    h1 {
+        font-size: 46px;
+        margin: .6em 1em 0.3em;
+        line-height: 1.2em;
+    }
+    .booking-form-w3layouts {
+        width: 90%;
+    }
+    .booking-form-w3layouts input[type="submit"],
+    .booking-form-w3layouts input[type="reset"] {
+        padding: 0.5em 2em;
+    }
+}
+
+@media(min-width:481px) {
+    .main-flex-w3ls-sectns {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+    .form-w3-agile-text1,
+    .form-w3-agile-text2 {
+        flex-basis: 48.5%;
+        -webkit-flex-basis: 48.5%;
+    }
+}
+
+@media(min-width:737px) {
+    .triple-wthree {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+    .form-w3-agile-text11,
+    .form-w3-agile-text22,
+    .form-w3-agile-text33 {
+        flex-basis: 32%;
+        -webkit-flex-basis: 32%;
+    }
+}
+
+@media(max-width:480px) {
+    ul.radio-buttons-w3-agileits li {
+        margin: 0em 0.5em;
+    }
+    .radio-section {
+        margin: 1.3em 0 .7em;
+    }
+    .ui-datepicker,
+    .wickedpicker {
+        width: 71%;
+    }
+    .booking-form-w3layouts {
+        width: 85%;
+    }
+    h1 {
+        margin: .6em 0.6em 0.3em;
+        letter-spacing: 3.5px;
+    }
+    ul.radio-buttons-w3-agileits li {
+        margin: 1em 0em 0em 0.2em;
+        display: block;
+    }
+    .booking-form-w3layouts input[type="submit"],
+    .booking-form-w3layouts input[type="reset"] {
+        font-size: 1em;
+    }
+    .booking-form-w3layouts textarea {
+        height: 60px;
+    }
+    .copyright p {
+        font-size: 14px;
+    }
+    .radio-section {
+        margin: 1em 0 .7em;
+    }
+}
+
+@media(max-width:440px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 69.5%;
+    }
+    h1 {
+        margin: .6em 0.4em 0.3em;
+        letter-spacing: 2px;
+    }
+    .copyright {
+        margin: 1em 1.5em;
+    }
+}
+
+@media(max-width:414px) {
+    .booking-form-w3layouts {
+        width: 90%;
+    }
+    .ui-datepicker,
+    .wickedpicker {
+        width: 75.5%;
+    }
+    h1 {
+        letter-spacing: 1px;
+    }
+    .booking-form-w3layouts {
+        width: 90%;
+        padding: 1.5em 1.7em;
+    }
+    .ui-datepicker,
+    .wickedpicker {
+        width: 76%;
+    }
+}
+
+@media(max-width:384px) {
+    h1 {
+        font-size: 42px;
+    }
+    .ui-datepicker,
+    .wickedpicker {
+        width: 75%;
+    }
+    .copyright p {
+        letter-spacing: 1.5px;
+    }
+    .booking-form-w3layouts input[type="submit"],
+    .booking-form-w3layouts input[type="reset"] {
+        float: none;
+    }
+    .booking-form-w3layouts input[type="submit"] {
+        margin-right: 0em;
+    }
+}
+
+@media(max-width:375px) {
+    .ui-datepicker,
+    .wickedpicker {
+        width: 75%;
+    }
+    .copyright p {
+        font-size: 13.5px;
+    }
+}
+
+@media(max-width:320px) {
+    h1 {
+        font-size: 35px;
+        letter-spacing: 1px;
+    }
+    .booking-form-w3layouts {
+        width: 93%;
+        padding: 1.3em 1.5em;
+    }
+    .ui-datepicker,
+    .wickedpicker {
+        width: 76.7%;
+    }
+    h2.sub-heading-agileits,
+    h3.sub-heading-agileits {
+        font-size: 18px;
+        letter-spacing: 1.4px;
+        padding: 0px 12px 5px 0px;
+    }
+}
+
+
+/*--//responsive--*/
