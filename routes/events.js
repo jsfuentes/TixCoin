@@ -11,20 +11,28 @@ var upload = multer({ dest: 'public/uploads/'});
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  // Event.find({}, function (err, events) {
-  //   if (err) return res.send(err);
-  //   // 'athletes' contains the list of athletes that match the criteria.
-  //   console.log("ALL EVENTS: ", events);
-  //   res.render('listing', {events: events});
-  // });
-  console.log("/events");
-  res.render('listings');
+  Event.find({}, function (err, events) {
+    if (err) return res.render('404');
+    // 'athletes' contains the list of athletes that match the criteria.
+    console.log("ALL EVENTS: ", events);
+    res.render('listings', {events: events});
+  });
+  // console.log("/events");
+  // res.render('listings', { events: events });
 });
 
 router.get('/id/:eventId', function(req, res) {
-  console.log("/events/id");
-  console.log("eid: ", )
-  res.render('listing');
+  console.log("eid: ", req.params);
+  Event.findOne({_id: req.params.eventId}, function (err, event) {
+    if (err) return res.render('404');
+
+    console.log("THE REQUESTED EVENT:", event);
+    res.render('listing', {event: event});
+  });
+});
+
+router.get('/checkout', function(req, res) {
+  res.render('checkout.ejs');
 });
 
 router.get('/create', function(req, res) {

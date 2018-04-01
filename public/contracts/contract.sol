@@ -102,14 +102,17 @@ contract TokenTicket is ERC20Interface, Ownable{
     uint8 public constant decimals = 0;
     bool public saleComplete = false;
     string public name; //
-    string public symbol; // 
+    string public symbol; //
     uint256 public totalSupply;
-    string EventLocation; //
-    string EventInformation; //
-    uint256 EventStartTime; //
+    string public EventLocation; //
+    string public EventInformation; //
+    uint256 public EventStartTime; //
     uint256 public feeForTicket; //
+    uint256 public EventEndTime;
+    string public Organizer;
+    string public OrganizerInfo;
 
-    function TokenTicket(string _name, string _symbol, uint256 _totalSupply, string _EventLocation, string _EventInformation, uint256 _EventStartTime, uint _feeForTicket) public onlyOwner{
+    function TokenTicket(string _name, string _symbol, uint256 _totalSupply, string _EventLocation, string _EventInformation, uint256 _EventStartTime, uint256 _EventEndTime, uint256 _feeForTicket, string _Organizer, string _OrganizerInfo) public onlyOwner{
         name = _name;
         symbol  = _symbol;
         totalSupply = _totalSupply;
@@ -117,17 +120,20 @@ contract TokenTicket is ERC20Interface, Ownable{
         EventInformation = _EventInformation;
         EventStartTime = _EventStartTime;
         feeForTicket = _feeForTicket;
+        EventEndTime = _EventEndTime;
+        Organizer = _Organizer;
+        OrganizerInfo = _OrganizerInfo;
         balances[owner] = _totalSupply;
     }
-    
+
     function totalSupply() public constant returns(uint){
         return totalSupply;
     }
-    
+
     function balanceOf(address _caller) public constant returns(uint){
         return balances[_caller];
     }
-    
+
     function transfer(address _to, uint _tokens) public returns (bool){
         require(_to != address(0));
         require(_tokens <= balances[msg.sender] );
@@ -135,15 +141,15 @@ contract TokenTicket is ERC20Interface, Ownable{
         balances[_to] = balances[_to].add(_tokens);
         emit Transfer(msg.sender, _to, _tokens);
         return true;
-        
+
     }
-    
+
     function approve(address _spender, uint _tokens) public returns (bool){
         allowed[msg.sender][_spender] = _tokens;
         emit Approval(msg.sender, _spender, _tokens);
         return true;
     }
-    
+
     function transferFrom(address _from, address _to, uint _tokens) public returns (bool){
         require(_to != address(0));
         require(_tokens <= balances[_from]);
@@ -154,28 +160,28 @@ contract TokenTicket is ERC20Interface, Ownable{
         emit Transfer(_from, _to, _tokens);
         return true;
     }
-    
+
     function allowance(address _tokenOwner, address _spender) public constant returns (uint){
         return allowed[_tokenOwner][_spender];
     }
-    
+
     function pauseSales() external onlyOwner {
         pause = true;
     }
-    
+
     function resumeSales() external onlyOwner{
         pause = false;
     }
-    
+
     function hikeFee(uint _fee) external onlyOwner{
         feeForTicket = _fee;
     }
-    
+
     function mint(uint256 _newTickets) external onlyOwner{
         balances[owner] = balances[owner].add(_newTickets);
         totalSupply = totalSupply.add(_newTickets);
     }
-    
+
     function withdraw() external onlyOwner{
         address myAddress = this;
         owner.transfer(myAddress.balance);
@@ -194,7 +200,9 @@ contract TokenTicket is ERC20Interface, Ownable{
     }
     function getInfo() external view returns(string, string, string, string, uint256, uint256, uint256){
 
-        return (name, symbol, EventLocation, EventInformation, EventStartTime,ticketsSold, feeForTicket);
+        return (name, symbol, EventLocation, EventInformation, EventStartTime,EventEndTime, feeForTicket);
     }
-    
+    function getOrganizerInfo() external view returns(string, string){
+        return (Organizer, OrganizerInfo);
+    }
 }

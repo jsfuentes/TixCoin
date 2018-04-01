@@ -3,14 +3,14 @@
 
 <head>
 	<title>Tickets4Tokens</title>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-  <form action="/events/create" method="post" enctype="multipart/form-data">
+  <form action="/events/create" method="post" id="eventCreation" enctype="multipart/form-data">
     <input type="file" name="img"> </input>
+		<input type="text" name="name" id="name" placeholder="Full Name" required>
     <input type="submit" value="go"> </input>
   </form>
-
-  <div>
-    All Events: <%= events %>
-  </div>
 </body>
+
+<script type="text/javascript" src="/js/formSubmit.js"></script>
