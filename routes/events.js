@@ -21,9 +21,9 @@ router.get('/', function(req, res) {
   // res.render('listings', { events: events });
 });
 
-router.get('/id/:eventId', function(req, res) {
+router.get('/id/:address', function(req, res) {
   console.log("eid: ", req.params);
-  Event.findOne({_id: req.params.eventId}, function (err, event) {
+  Event.findOne({address: req.params.address}, function (err, event) {
     if (err) return res.render('404');
 
     console.log("THE REQUESTED EVENT:", event);
