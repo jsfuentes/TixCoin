@@ -14,12 +14,33 @@ var sampleEvent = {
   img: "/076798b7331be39f6f2d3f6d89ed888a"
 };
 
+function timeDateConversion(date, time){
+  var timeSplit = time.split(' ');
+  var hour = timeSplit[0];
+  var minute = timeSplit[2];
+  var era = timeSplit[3];
+
+  var myDate = Date.parse(date);
+  myDate.setHours(sHours);
+  myDate.setMinutes(sMinutes);
+  return myDate;
+}
+
 $(document).ready(function(){
   $("#eventCreation").submit(function( event ) {
     // var $inputs = $('#eventCreation :input');
-    rawFormData = $( this ).serializeArray();
-    console.log("1", rawFormData);
-    alert("HELLO");
+    var rawFormData = $( this ).serializeArray();
+    var formDict = {};
+    rawFormData.forEach(function(input) {
+      formDict[input.name] = input.value;
+    });
+
+    var newDate = timeDateConversion(formDict['text'], formDict['time']);
+    console.log("3");
+    console.log(formDict);
+    newDate.update()
+    console.log(newDate);
+    alert("Check Console, we testingggg");
     event.preventDefault();
   });
 });
