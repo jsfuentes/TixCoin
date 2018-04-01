@@ -147,6 +147,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .secondary {
   position: relative;
+  margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
   padding-bottom: 20px;
@@ -154,6 +155,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .other_secondary {
   position: relative;
+  margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
   padding-bottom: 20px;
@@ -179,6 +181,62 @@ textarea:focus,input:focus{
 
 a {
     text-decoration: none;
+}
+
+
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: orange;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: orange;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .txt-rt {
@@ -275,7 +333,7 @@ img {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
-    background: url(../images/banner1.jpg)no-repeat center top;
+    background: url(./public/images/banner1.jpg)no-repeat center top;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -393,7 +451,7 @@ select.form-control option {
 .booking-form-w3layouts input[type="submit"],
 .booking-form-w3layouts input[type="reset"] {
     text-transform: capitalize;
-    background: #0091cd;
+    background: orange;
     color: #fff;
     padding: 0.5em 4em;
     border: none;
@@ -412,7 +470,7 @@ select.form-control option {
 
 .booking-form-w3layouts input[type="submit"] {
     margin-right: 1.5em;
-    background: #d2741c;
+    background: orange;
 }
 
 .booking-form-w3layouts input[type="submit"]:hover {
@@ -890,6 +948,8 @@ ul.radio-buttons-w3-agileits li {
 
 
 /*--//responsive--*/
+<<<<<<< HEAD
+=======
 
 /*
 Author: W3layout
@@ -3745,3 +3805,4 @@ a.b-home {
    font-size:1.2em;
    text-transform: uppercase;
 }
+>>>>>>> origin/master
