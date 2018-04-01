@@ -39,7 +39,7 @@ router.get('/checkout', function(req, res) {
 });
 
 router.get('/create', function(req, res) {
-  res.render('create_form');
+  res.render('event_form');
 });
 
 router.post('/create', upload.any(), eventsController.event_create);

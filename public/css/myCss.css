@@ -7,6 +7,15 @@
   font-size: 30em;
 }
 
-.myHiddenAddress {
+.myHidden {
   visibility: hidden;
+}
+
+.myHeader {
+  color: black;
+}
+
+.myCenter {
+  text-align: middle;
+  vertical-align: middle;
 }

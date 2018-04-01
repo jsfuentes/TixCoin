@@ -28,7 +28,7 @@ exports.event_create = function(req, res) {
   });
   newEvent.save();
   console.log("My Event:", newEvent);
-  res.send(req.files);
+  res.redirect('/events');
 };
 
 // var event = new Schema({

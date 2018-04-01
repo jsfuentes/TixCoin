@@ -16,7 +16,7 @@ $( document ).ready(function() {
             <p id="eventQuantity">Quantity: ' + quantity + '</p>\
             <p id="eventAddress">Address: ' + ethaddress + '</p>\
           </div>\
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Execute Transaction</button>\
+            <button class="btn btn-primary btn-lg btn-block" onclick="buy(' + ethaddress + ')">Execute Transaction</button>\
             <hr class="mb-4">\
       </div>\
     </div>';

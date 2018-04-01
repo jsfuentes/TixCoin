@@ -1043,7 +1043,7 @@ body a{
 	-o-background-size: cover;
 	min-height:800px;
 	text-align: center;
-	padding-top:1em;
+	padding-top:2em;
 }
 .header_top_left{
 	float:left;
@@ -1989,6 +1989,7 @@ a.create:hover, .account-top input[type="submit"]:hover, .register-but form inpu
 	background:#000;
 	color:#fff;
 }
+<<<<<<< HEAD
 .footer{
 	padding:5em 0;
   font-size: 12px;
@@ -1996,6 +1997,8 @@ a.create:hover, .account-top input[type="submit"]:hover, .register-but form inpu
   text-align:
 }
 
+=======
+>>>>>>> origin/master
 
 .cssmenu{
 	float:left;
@@ -2066,7 +2069,7 @@ ul.social li a i.tw{
 }
 /*--men--*/
 .men{
-	padding: 5em 0 2em;
+	padding: 1em 0 2em;
    margin-bottom: 5em;
 }
 .listings_banner {
@@ -2077,8 +2080,8 @@ ul.social li a i.tw{
 	-o-background-size: cover;
 	min-height:225px;
 	text-align: center;
-	padding-top: 3em;
-  margin-bottom: 3em;
+	padding-top: 2em;
+  margin-bottom: 1em;
 }
 .sidebar_men {
 	margin-right: 1em;
@@ -3171,7 +3174,7 @@ ul.content-home li .item-html button {
 }
 .banner {
 	min-height:600px;
-	padding-top: 2em;
+	padding-top: 3em;
 }
 .field_content {
 	top: 12em;
@@ -3580,7 +3583,7 @@ i.user {
 @media (max-width:375px){
 .banner {
 	min-height:200px;
-	padding-top:1em;
+	padding-top:2em;
 }
 .header_top_left {
   float: none;
