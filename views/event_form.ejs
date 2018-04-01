@@ -16,7 +16,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- Custom Theme files -->
 <link href="/css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
+<link href="/css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+<link rel="stylesheet" href="/css/jquery-ui.css" />
+<script type="application/x-javascript">
+	addEventListener("load", function () {
+		setTimeout(hideURLbar, 0);
+	}, false);
+	function hideURLbar() {
+		window.scrollTo(0, 1);
+	}
+</script>
 <!--webfont-->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Dorsa' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
@@ -295,6 +308,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    <div class="footer">
    	 <div class="container">
    	 	<div class="newsletter">
+
+				<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+	<!-- Time Js -->
+		<script type="text/javascript" src="../js/wickedpicker.js"></script>
+		<script type="text/javascript">
+			$('.timepicker,.timepicker1').wickedpicker({
+				twentyFour: false
+			});
+		</script>
+		<!--// Time Js -->
+		<!-- Calendar Js -->
+		<script src="../js/jquery-ui.js"></script>
+		<script>
+			$(function () {
+				$("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+			});
+		</script>
+		<!-- //Calendar Js -->
+		<script type="text/javascript" src="/js/deploy-smartcontract.js"></script>
+		<script type="text/javascript" src="/js/formSubmit.js"></script>
 
 		</div>
    		<div class="cssmenu">
