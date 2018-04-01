@@ -1,21 +1,7 @@
 //Must be imported after deploy-smartcontract is imported
 console.log("FORM SUBMIT ACTIVE");
 
-var sampleEvent = {
-  name: "LA Hacks",
-  description: "Ok hackathon ever",
-  location: "Here",
-  type: "Hackathon",
-  price: 0,
-  count: 1000,
-  date: "3/31/18",
-  start: 99999998, //in UTC
-  end: 99999999, //in UTC
-  organizerName: "UCLA",
-  organizerDescription: "the best school",
-  address: "0x97ee4eac010d8e8c5577200cbfa157dfc6c551a2",
-  img: "/076798b7331be39f6f2d3f6d89ed888a"
-};
+var submitted = false;
 
 function timeDateConversion(date, time){
   var timeSplit = time.split(' ');
@@ -42,6 +28,12 @@ function timeDateConversion(date, time){
 
 $(document).ready(function(){
   $("#eventCreation").submit(function( event ) {
+    //early exit and submitting if already made smart contract, needed cuz I already figured out how to send images thorugh the form
+    if(submitted){
+      console.log("Submitting Form");
+      return;
+    }
+
     // var $inputs = $('#eventCreation :input');
     var rawFormData = $( this ).serializeArray();
     var formDict = {};
@@ -51,9 +43,13 @@ $(document).ready(function(){
 
     var dateUTC = timeDateConversion(formDict['date'], formDict['time']);
     console.log(formDict);
-    // DeployContract(formDict.name, 'ttt', formDict.count, formDict.location, "empty description", dateUTC, dateUTC, formDict.price, formDict.organizer, formDict.organizerInfo);
 
-    alert("Check Console, we testingggg");
-    // event.preventDefault();
+    console.log("Deploying Contract");
+    //Deploy Contract will submit the form when the address is complete
+    DeployContract(formDict.name, 'ttt', formDict.count, formDict.location, "empty description", dateUTC, dateUTC, formDict.price, formDict.organizer, formDict.organizerInfo);
+
+    submitted = true;
+    // alert("Check Console, we testingggg");
+    event.preventDefault();
   });
 });
