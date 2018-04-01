@@ -171,6 +171,59 @@ input[type=number]::-webkit-outer-spin-button {
   border-style: none;
 }
 
+#checkoutBox{
+  border-style: solid;
+  border-color: black;
+  border: 10px;
+  border-radius: 2px;
+  text-align: left;
+  width: 300px;
+  height: 300px;
+  margin: 1em;
+}
+
+#tag{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#eventName{
+  padding-bottom: 5px;
+}
+
+#eventPrice{
+  padding-bottom: 5px;
+}
+
+#description{
+  padding-bottom: 5px;
+}
+
+#dateTime{
+  padding-bottom: 5px;
+}
+
+#checkoutClass
+{
+  padding-left: 10em;
+  padding-right: 10em;
+
+}
+
+.body{
+  border-style: solid;
+  border-radius: 2px;
+  border-color: black;
+  border-width: thick;
+  border: 1em;
+  height: 200px;
+  padding: 1em;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #999999;
+}
+
 textarea:focus,input:focus{
   outline: none;
 }
@@ -2008,6 +2061,7 @@ ul.social li a i.tw{
 	min-height:225px;
 	text-align: center;
 	padding-top: 3em;
+  margin-bottom: 3em;
 }
 .sidebar_men {
 	margin-right: 1em;
