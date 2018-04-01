@@ -1,5 +1,4 @@
-
-<script>
+console.log("Smart contract here");
 
 var web3js = new Web3(web3.currentProvider);
 function setData(name, symbol, totalSupply, EventLocation, EventInformation, EventStartTime, EventEndTime, feeForTicket,Organizer, OrganizerInfo){
@@ -38,5 +37,3 @@ var tokenticket = tokenticketContract.new(
          console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
     }
  },500);
-
-</script>

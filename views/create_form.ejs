@@ -36,31 +36,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 
 <body style="background-image: url(../images/banner1.jpg)">
-
 	<!--background-->
 	<h1>Event Form </h1>
 	<div class="booking-form-w3layouts">
 		<!-- Form starts here -->
-		<form action="#" method="post">
+		<form id="eventCreation" action="/events/create" method="post">
 			<h2 class="sub-heading-agileits">Event Details</h2>
 			<div class="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
-					<input type="text" name="Text" placeholder="Event Name" value="" required>
+					<input type="text" name="name" placeholder="Event Name" value="" required>
 				</div>
 			</div>
 
 			<div class="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
-					<input id="datepicker" name="Text" type="text" placeholder="Event Date" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
+					<input id="datepicker" name="date" type="text" placeholder="Event Date" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
 					    required>
 				</div>
 				<div class="field-agileinfo-spc form-w3-agile-text2">
-					<input type="text" id="timepicker" name="Time" class="timepicker form-control" placeholder="Event Time" value="" required>
+					<input type="text" id="timepicker" name="time" class="timepicker form-control" placeholder="Event Time" value="" required>
 				</div>
 			</div>
 			<div class ="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
-      		<input id="autocomplete" placeholder="Location" onFocus="geolocate()" type="text" required></input>
+      		<input id="autocomplete" placeholder="Location" name="location" onFocus="geolocate()" type="text" required></input>
     	  </div>
 
         <script>
@@ -218,20 +217,20 @@ document.addEventListener("click", closeAllSelect);
 
 			<div class="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
-					<input type="text" name="Name" placeholder="Organizer" required>
+					<input type="text" name="organizer" placeholder="Organizer" required>
 				</div>
 				<div class="field-agileinfo-spc form-w3-agile-text2">
-					<input type="text" name="Phone no" placeholder="Organizer Info" required>
+					<input type="text" name="organizerInfo" placeholder="Organizer Info" required>
 				</div>
 			</div>
 			<div class="main-flex-w3ls-sectns">
 				<div class="secondary">
 					<label id="actual_label" for = "prices">Ticket Price:</label>
-					<input id="prices" type="number" step="any" placeholder="1 ETH" required>
+					<input id="prices" name="price" type="number" step="any" placeholder="1 ETH" required>
 				</div>
 				<div class="other_secondary">
 					<label id="actual_label" for = "prices"># Tickets:</label>
-					<input id="prices" type="number" placeholder="0" required>
+					<input id="prices" name="count" type="number" placeholder="0" required>
 				</div>
 			</div>
 			<div class="field-agileinfo-spc form-w3-agile-text2">
@@ -244,14 +243,11 @@ document.addEventListener("click", closeAllSelect);
 		</form>
 		<!--// Form starts here -->
 	</div>
-	<!--copyright-->
-	<div class="copyright">
-		<p>2018. Tickets4Tokens	</p>
-	</div>
-	<!--//copyright-->
-	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<!-- <%- include('./partials/footer.ejs') %> -->
+
+	<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
 	<!-- Time Js -->
-	<script type="text/javascript" src="js/wickedpicker.js"></script>
+	<script type="text/javascript" src="../js/wickedpicker.js"></script>
 	<script type="text/javascript">
 		$('.timepicker,.timepicker1').wickedpicker({
 			twentyFour: false
@@ -259,14 +255,15 @@ document.addEventListener("click", closeAllSelect);
 	</script>
 	<!--// Time Js -->
 	<!-- Calendar Js -->
-	<script src="js/jquery-ui.js"></script>
+	<script src="../js/jquery-ui.js"></script>
 	<script>
 		$(function () {
 			$("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
 		});
 	</script>
 	<!-- //Calendar Js -->
-
+	<script type="text/javascript" src="/js/deploy-smartcontract.js"></script>
+	<script type="text/javascript" src="/js/formSubmit.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,6 @@
+//Must be imported after deploy-smartcontract is imported
+console.log("FORM SUBMIT ACTIVE");
+
 var sampleEvent = {
   name: "LA Hacks",
   description: "Ok hackathon ever",
@@ -20,10 +23,21 @@ function timeDateConversion(date, time){
   var minute = timeSplit[2];
   var era = timeSplit[3];
 
-  var myDate = Date.parse(date);
-  myDate.setHours(sHours);
-  myDate.setMinutes(sMinutes);
-  return myDate;
+  if(era === "PM") {
+    if(hour !== 12){
+      hour = parseInt(hour) + 12;
+    }
+  } else if (era === "AM") {
+    if(hour === 12) {
+      hour = parseInt(hour) = 0;
+    }
+  }
+  var parsedD = Date.parse(date);
+  var myDate = new Date(parsedD);
+
+  myDate.setHours(hour, minute);
+  var dateUTC = myDate.getTime();
+  return dateUTC;
 }
 
 $(document).ready(function(){
@@ -35,11 +49,10 @@ $(document).ready(function(){
       formDict[input.name] = input.value;
     });
 
-    var newDate = timeDateConversion(formDict['text'], formDict['time']);
-    console.log("3");
-    console.log(formDict);
-    newDate.update()
-    console.log(newDate);
+    var dateUTC = timeDateConversion(formDict['date'], formDict['time']);
+
+
+
     alert("Check Console, we testingggg");
     event.preventDefault();
   });
