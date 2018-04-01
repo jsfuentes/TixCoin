@@ -12,7 +12,7 @@ var upload = multer({ dest: 'public/uploads/'});
 /* GET users listing. */
 router.get('/', function(req, res) {
   Event.find({}, function (err, events) {
-    if (err) return res.send(err);
+    if (err) return res.render('404');
     // 'athletes' contains the list of athletes that match the criteria.
     console.log("ALL EVENTS: ", events);
     res.render('listings', {events: events});
@@ -22,9 +22,13 @@ router.get('/', function(req, res) {
 });
 
 router.get('/id/:eventId', function(req, res) {
-  console.log("/events/id");
-  console.log("eid: ", req.params)
-  res.render('listing');
+  console.log("eid: ", req.params);
+  Event.findOne({_id: req.params.eventId}, function (err, event) {
+    if (err) return res.render('404');
+
+    console.log("THE REQUESTED EVENT:", event);
+    res.render('listing', {event: event});
+  });
 });
 
 router.get('/checkout', function(req, res) {
