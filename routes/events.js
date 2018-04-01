@@ -23,7 +23,10 @@ router.get('/', function(req, res) {
 
 router.get('/id/:address', function(req, res) {
   console.log("eid: ", req.params);
-  Event.findOne({address: req.params.address}, function (err, event) {
+  var reqAddress = req.params.address;
+  console.log("Address");
+  console.log(reqAddress);
+  Event.findOne({address: reqAddress}, function (err, event) {
     if (err) return res.render('404');
 
     console.log("THE REQUESTED EVENT:", event);
