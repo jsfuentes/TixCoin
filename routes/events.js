@@ -44,4 +44,8 @@ router.get('/create', function(req, res) {
 
 router.post('/create', upload.any(), eventsController.event_create);
 
+router.get('/create2', function(req, res) {
+  res.render('event_form');
+});
+
 module.exports = router;
