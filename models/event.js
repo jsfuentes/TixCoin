@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 var event = new Schema({
     name: String,
     description: String,
-    img: { data: Buffer, contentType: String },
+    img: String, //will be stored in file system 
     location: String,
     type: String,
     price: Number,
