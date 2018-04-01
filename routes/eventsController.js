@@ -6,22 +6,24 @@ const PATH_TO_UPLOAD = "public/uploads/";
 
 // Handle Event create on POST.
 exports.event_create = function(req, res) {
-  console.log("Current dir", process.cwd());
   // var imgFile = fs.readFileSync(PATH_TO_UPLOAD + req.files[0].filename);
+  console.log("body");
+  console.log(req.body);
+  console.log("files");
+  console.log(req.files);
 
   var newEvent = new Event({
-    name: "LA Hacks",
-    description: "Ok hackathon ever",
-    location: "Here",
-    type: "Hackathon",
-    price: 0,
-    count: 1000,
-    date: "3/31/18",
-    start: 99999998, //in UTC
-    end: 99999999, //in UTC
-    organizerName: "UCLA",
-    organizerDescription: "the best school",
-    address: "0x0a593d0c2cf2bbe71f47738497b05d590e213fa2",
+    name: req.body.name,
+    description: req.body.description,
+    location: req.body.location,
+    type: req.body.category,
+    price: req.body.price,
+    count: req.body.count,
+    date: req.body.date,
+    time: req.body.time,
+    organizerName: req.body.organizer,
+    organizerDescription: req.body.organizerInfo,
+    address: req.body.address,
     img: req.files[0].filename
   });
   newEvent.save();

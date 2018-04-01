@@ -51,9 +51,9 @@ $(document).ready(function(){
 
     var dateUTC = timeDateConversion(formDict['date'], formDict['time']);
     console.log(formDict);
-    DeployContract(formDict.name, 'ttt', formDict.count, formDict.location, "empty description", dateUTC, dateUTC, formDict.price, formDict.organizer, formDict.organizerInfo);
+    // DeployContract(formDict.name, 'ttt', formDict.count, formDict.location, "empty description", dateUTC, dateUTC, formDict.price, formDict.organizer, formDict.organizerInfo);
 
     alert("Check Console, we testingggg");
-    event.preventDefault();
+    // event.preventDefault();
   });
 });

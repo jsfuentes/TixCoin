@@ -7,14 +7,13 @@ var Schema = mongoose.Schema;
 var event = new Schema({
     name: String,
     description: String,
-    img: String, //will be stored in file system 
+    img: String, //will be stored in file system
     location: String,
     type: String,
     price: Number,
     count: Number,
     date: String,
-    start: Number, //in UTC
-    end: Number, //in UTC
+    time: String,
     organizerName: String,
     organizerDescription: String,
     address: String
