@@ -2835,6 +2835,7 @@ a.b-home {
 }
 .cart-header {
   position: relative;
+  height: 15em;
 }
 .cart-header2 {
   position: relative;
@@ -3737,4 +3738,10 @@ a.b-home {
 
 .availability_and_category {
    overflow: hidden;
+}
+
+.shopping_bag {
+   color: #000;
+   font-size:1.2em;
+   text-transform: uppercase;
 }
