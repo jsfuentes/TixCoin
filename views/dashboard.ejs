@@ -58,13 +58,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		   		    <div class="clearfix"></div>
 	   		    </div>
 					<h1 class="myHeader"> Dashboard </h1>
-			    <a href="#" class="btn btn-primary col-md-6" onclick="pauseSales()"> <span>Pause Sales</span> </a>
-			    <a href="#" class="btn btn-primary col-md-6" onclick="resumeSales()">Resume Sales</a>
-			    <a href="#" class="btn btn-primary col-md-6" onclick="hikeFee()">Increase Price</a>
-			    <a href="#" class="btn btn-primary col-md-6" onclick="withdraw()">Withdraw</a>
-			    <a href="#" class="btn btn-primary col-md-6" onclick="TransferOwnership()">Transfer Ownership</a>
-			    <a href="#" class="btn btn-primary col-md-6" onclick="mint()">Mint</a>
-
+			    <a href="#" class="btn btn-primary col-md-4" onclick="pauseSales()"> <span>Pause Sales</span> </a>
+			    <a href="#" class="btn btn-primary col-md-4" onclick="resumeSales()">Resume Sales</a>
+					<a href="#" class="btn btn-primary col-md-4" onclick="withdraw()">Withdraw</a>
+					<div class="col-md-4">
+						<div class="field-agileinfo-spc form-w3-agile-text1">
+							<input type="text" name="fee" placeholder="Price To Increase" value="" id="fee" required>
+						</div>
+				    <a href="#" class="btn btn-primary" onclick="hikeFee()">Increase Price</a>
+					</div>
+					<div class="col-md-4">
+						<div class="field-agileinfo-spc form-w3-agile-text1">
+							<input type="text" name="transfer" id="transfer" placeholder="Address" value="" required>
+						</div>
+				    <a href="#" class="btn btn-primary" onclick="TransferOwnership()">Transfer Ownership</a>
+					</div>
+					<div class="col-md-4">
+						<div class="field-agileinfo-spc form-w3-agile-text1">
+							<input type="text" name="mint" id="mint" placeholder="Amount to Mint" value="" required>
+						</div>
+				    <a href="#" class="btn btn-primary" onclick="mint()">Mint</a>
+					</div>
 			</div>
 		    <div class="clearfix"> </div>
 		</div>

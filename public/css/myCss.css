@@ -14,3 +14,8 @@
 .myHeader {
   color: black;
 }
+
+.myCenter {
+  text-align: middle;
+  vertical-align: middle;
+}
