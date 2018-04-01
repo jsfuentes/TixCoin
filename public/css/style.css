@@ -1940,6 +1940,7 @@ ul.social li a i.tw{
 /*--men--*/
 .men{
 	padding: 5em 0 2em;
+   margin-bottom: 5em;
 }
 .listings_banner {
 	background: url(../images/concert.jpg) no-repeat center top;
@@ -3724,12 +3725,16 @@ a.b-home {
    padding-right:3em;
 }
 
-.venue {
+.details_left {
    width: 50%;
    float: left;
 }
 
-.time {
+.details_right {
    width: 50%;
    float: right;
+}
+
+.availability_and_category {
+   overflow: hidden;
 }
