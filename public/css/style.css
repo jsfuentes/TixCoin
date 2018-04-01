@@ -206,14 +206,18 @@ input[type=number]::-webkit-outer-spin-button {
 
 #checkoutClass
 {
+  background: url(../images/fire.jpg) no-repeat center top;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   padding-left: 10em;
   padding-right: 10em;
-
 }
 
 .body{
   border-style: solid;
-  border-radius: 2px;
+  border-radius: 4px;
   border-color: black;
   border-width: thick;
   border: 1em;
@@ -222,6 +226,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 15px;
   font-weight: bold;
   background-color: #999999;
+  word-wrap: break-word;
 }
 
 textarea:focus,input:focus{
@@ -380,13 +385,20 @@ img {
     max-width: 100%;
 }
 
+.rand{
+  background: url(../images/fire.jpg) no-repeat center top;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
 
 /*--end reset--*/
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
-    background: url(./public/images/banner1.jpg)no-repeat center top;
+    background: url(./public/images/banner1.jpg)no-repeat center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1979,7 +1991,12 @@ a.create:hover, .account-top input[type="submit"]:hover, .register-but form inpu
 }
 .footer{
 	padding:5em 0;
+  font-size: 12px;
+  display: block;
+  text-align:
 }
+
+
 .cssmenu{
 	float:left;
 }
