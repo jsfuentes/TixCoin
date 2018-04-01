@@ -6,3 +6,7 @@
 .myName {
   font-size: 30em;
 }
+
+.myHiddenAddress {
+  visibility: hidden;
+}
