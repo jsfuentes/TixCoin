@@ -2049,7 +2049,7 @@ ul.social li a i.tw{
 }
 /*--men--*/
 .men{
-	padding: 5em 0 2em;
+	padding: 1em 0 2em;
    margin-bottom: 5em;
 }
 .listings_banner {
@@ -2061,7 +2061,7 @@ ul.social li a i.tw{
 	min-height:225px;
 	text-align: center;
 	padding-top: 3em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 .sidebar_men {
 	margin-right: 1em;
