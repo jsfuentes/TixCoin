@@ -10,3 +10,7 @@
 .myHidden {
   visibility: hidden;
 }
+
+.myHeader {
+  color: black;
+}
