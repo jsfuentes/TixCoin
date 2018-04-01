@@ -4,9 +4,6 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<!-- simpleCart.each(function(item){
-    console.log( item.get('quantity') + ' ' + item.get('name') + item.get('ethaddress') + ' ' + item.get('price'));
-}); -->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -28,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- start menu -->
 <link href="/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="/js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- <script>$(document).ready(function(){$(".megamenu").megamenu();});</script> -->
 <script src="/js/jquery.easydropdown.js"></script>
 <script src="/js/simpleCart.min.js"> </script>
 </head>
@@ -118,33 +115,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 </div>
 	</section>
 
-
-	 <div id="checkoutClass" class="myBox">
-			 <div class="col-md-3" id="checkoutBox">
-				 <div class="body">
-					 <p id="eventName">Event Name: Counter Strike Global Offensive</p>
-					 <p id="eventPrice">Event Price: 5 ETH</p>
-					 <p id="dateTime">Date: November 8,2018 @ 2:00 PM</p>
-					 <p id="description">Description: The 8th itheration of Valve's CS:GO major returns to Boston in 2018</p>
-				 </div>
-			 		 <button class="btn btn-primary btn-lg btn-block" type="submit">Execute Transaction</button>
-					 <hr class="mb-4">
-		 </div>
-		</div>
-
-		<script>
-
-		</script>
+	<!-- <div class="simpleCart_items"></div> -->
+	<div id="cartListing">
+		<!-- Fill with everything in the shopping cart with templateShopping.js -->
+	</div>
 
 	 <!-- Bootstrap core JavaScript
 	 ================================================== -->
 	 <!-- Placed at the end of the document so the pages load faster -->
 	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	 <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-	 <script src="../../../../assets/js/vendor/popper.min.js"></script>
-	 <script src="../../../../dist/js/bootstrap.min.js"></script>
-	 <script src="../../../../assets/js/vendor/holder.min.js"></script>
-	 <script>
+	 <script src="/js/templateShopping.js">
+
 		 // Example starter JavaScript for disabling form submissions if there are invalid fields
 		 (function() {
 			 'use strict';
