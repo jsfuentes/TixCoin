@@ -4,10 +4,12 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>Tickets on Blockchain Marketplace</title>
+<script src="../../js/blockchain-event.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -19,6 +21,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script>
 	console.log("Location", window.location.pathname);
 </script>
+
 
 
 <!--webfont-->
@@ -279,41 +282,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		          <div class="clearfix"></div>
 	    </div>
 		<div class="cont1 span_2_of_a1 simpleCart_shelfItem">
-				<h1>Eden Vertigo World Tour</h1>
+				<p id="Event_Name"><h1>Eden Vertigo World Tour</h1></p>
 				<div class="availability_and_category">
 					<div class="details_left">
 						<p class="availability">Availability: <span class="color">available</span></p>
 					    <div class="price_single">
-						  <span class="reducedfrom">$140.00</span>
-						  <span class="amount item_price actual">$120.00</span>
+						  <span class="amount item_price actual" id="Ticket_Price">$120.00</span>
 						</div>
 					</div>
 					<div class="details_right">
 						<h2 class="quick">Count:</h2>
-						<p class="quick_desc">1000</p>
+						<p class="quick_desc" id="Total_Supply">1000</p>
 					</div>
 				</div>
 
 				<h2 class="quick">Description:</h2>
-				<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+				<p class="quick_desc" id="Event_Description"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 				<div class="venue_and_time">
 					<div class="details_left">
 						<h2 class="quick">Venue</h2>
-						<p class="quick_desc">Fonda Theater. Los Angeles, CA, 90024</p>
+						<p class="quick_desc" id="Event_Venue">Fonda Theater. Los Angeles, CA, 90024</p>
 					</div>
 					<div class="details_right">
 						<h2 class="quick">Event Time</h2>
-						<p class="quick_desc">March 25, 2018</p>
+						<p class="quick_desc" id="Event_Start_Time">March 25, 2018</p>
 					</div>
 				</div>
 				<div class="organizer_and_organizer_desc">
 					<div class="details_left">
 						<h2 class="quick">Organizer</h2>
-						<p class="quick_desc">Fonda Theater. Los Angeles, CA, 90024</p>
+						<p class="quick_desc" id="Organizer_Name">Fonda Theater. Los Angeles, CA, 90024</p>
 					</div>
 					<div class="details_right">
 						<h2 class="quick">Organizer Description</h2>
-						<p class="quick_desc">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+						<p class="quick_desc" id="Organizer_Desc">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 					</div>
 				</div>
 
@@ -321,7 +323,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="quantity_box">
 					<ul class="product-qty">
 						<span>Category:</span>
-						<p class="quick_desc">Sports</p>
+						<p class="quick_desc" id="Event_Type">Sports</p>
 					   <!-- <span>Quantity:</span>
 					   <select>
 						 <option>1</option>
